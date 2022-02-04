@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+        heroku_service:
+                build: .
+                restart: "no"
+                container_name: heroku_container
+                image: shankershawn/heroku:latest
+                command: ["tail", "-F", "just_to_prevent_stopping_the_container"]

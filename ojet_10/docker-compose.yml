@@ -1,0 +1,9 @@
+version: "2"
+services:
+        ojet_service:
+                build: .
+                restart: always
+                container_name: my_composed_ojet_app
+                image: shankershawn/ojet:10.0.0-armv7-1.1
+                ports:
+                        - "8001:8000"
