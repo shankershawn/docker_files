@@ -2,12 +2,14 @@ version: '3'
 services: 
         zookeeper:
                 image: shankershawn/kafka-zookeeper:latest
+                pull_policy: always
                 privileged: true
                 restart: always
                 networks:
                         - kafka-network
         kafka:
                 image: shankershawn/kafka-server:latest
+                pull_policy: always
                 privileged: true
                 restart: always
                 networks:
