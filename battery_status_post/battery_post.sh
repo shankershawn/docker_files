@@ -7,5 +7,5 @@ do
 		export ringcount=$((((( 40 - $level ) / 5)) + 1))
 		curl --silent --output /dev/null -X POST https://raspi-alarm-client.herokuapp.com/v1/message/battery_level -H "Content-Type: application/json" -d '{"pulseCount":'${ringcount}',"pulseMillis":200,"intervalMillis":100}'
 	fi
-	sleep 5
+	sleep 50
 done
