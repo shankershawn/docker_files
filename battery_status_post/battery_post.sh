@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "Starting battery_status_post.sh"
 while true
 do
 	export level=$(acpi | sed "s|%||" | awk {'printf $4'} | sed "s|,||")
