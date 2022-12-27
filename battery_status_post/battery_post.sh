@@ -7,7 +7,7 @@ do
 	if [ $level -lt 40  ] && [ $status -eq 1 ]
 	then
 		export ringcount=$((((( 40 - $level ) / 5)) + 1))
-		curl --silent --output /dev/null -X POST https://raspi-alarm-client.herokuapp.com/v1/message/battery_level -H "Content-Type: application/json" -d '{"pulseCount":'${ringcount}',"pulseMillis":200,"intervalMillis":100}'
+		curl --silent --output /dev/null -X POST http://129.154.37.114:5001/v1/message/battery_level -H "Content-Type: application/json" -d '{"pulseCount":'${ringcount}',"pulseMillis":200,"intervalMillis":100}'
 	fi
 	sleep 5
 done
